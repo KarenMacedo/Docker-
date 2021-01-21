@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <report
+            string="Informe de libro"
+            id="report_libro"
+            model="biblioteca.libro"
+            report_type="qweb-pdf"
+            name="biblioteca.report_biblioteca_libro"
+            file="biblioteca.report_biblioteca_libro"
+            attachment_use="True"
+        />
+    </data>
+</odoo>

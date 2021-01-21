@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record model="ir.actions.act_window" id="action_biblioteca_libro_view">
+            <field name="name">Libros</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">biblioteca.libro</field>
+            <field name="view_mode">tree,form,kanban</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Libros
+                </p>
+                <p>
+                    Click 'Nuevo' para añadir nuevos libros.
+                </p>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_biblioteca_categoria_view">
+            <field name="name">Categorias</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">biblioteca.categoria</field>
+            <field name="view_mode">tree,form,kanban</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Categoria
+                </p>
+                <p>
+                    Click 'Nuevo' para añadir nuevas categorias.
+                </p>
+            </field>
+        </record>
+
+
+
+        <menuitem id="menu_biblioteca_root" name="Biblioteca" sequence="10"/>
+
+        <menuitem id="menu_biblioteca_view" name="Libros" parent="menu_biblioteca_root" sequence="0" action="action_biblioteca_libro_view"/>
+        <menuitem id="menu_biblioteca_categoria" name="Categoria" parent="menu_biblioteca_root" sequence="0"
+                  action="action_biblioteca_categoria_view"/>
+
+<!--    Opcion de generar reporte     -->
+        <menuitem id="menu_biblioteca_report" name="Reportes" parent="menu_biblioteca_root" sequence="0" action="action_biblioteca_libro_view"/>
+<!--        <menuitem id="menu_biblioteca_report" name="Generar reporte" parent="menu_biblioteca_report" sequence="0" action="action_biblioteca_libro_view"/>-->
+        <!--         <menuitem id="menu_biblioteca_listarCatego" name="Listar categoria" parent="menu_biblioteca_categoria" sequence="0" -->
+        <!--                   action="action_biblioteca_categoria_view"/> -->
+        <!--name="action_report"-->
+
+    </data>
+</odoo>
+
+
